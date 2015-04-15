@@ -1,0 +1,11 @@
+{
+  "result": [
+    [ // Text 1
+      {"probability": 0.246, "label": "Health & Medicine"},
+      {"probability": 0.654, "label": "Alternative Medicine"}
+    ],
+    [ // Text 2
+      {"probability": 0.172, "label": "Humanities"}
+    ]
+  ]
+}
