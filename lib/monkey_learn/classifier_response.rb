@@ -34,7 +34,7 @@ module MonkeyLearn
     end
 
     def code
-      return @http_response.code
+      return @http_response.code.to_i
     end
 
     private
