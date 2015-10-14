@@ -18,7 +18,8 @@ class ClassifierTest < MiniTest::Test
   end
 
   def test_classify_gets_a_correct_response
-    classifier = MonkeyLearn::Classifier.new(@api_key, @classifier_id)
+    classifier = MonkeyLearn::Classifier.new(api_key: @api_key,
+                                             classifier_id: @classifier_id)
     classifier_response = classifier.classify("foo", "bar")
     assert_equal 200, classifier_response.code 
     assert_equal 2, classifier_response.text_results.count

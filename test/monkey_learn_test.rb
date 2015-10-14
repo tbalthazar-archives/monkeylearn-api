@@ -10,8 +10,8 @@ class MonkeyLearnTest < MiniTest::Test
   end
 
   def test_build_post_request
-    monkey_learn = MonkeyLearn::MonkeyLearn.new(@api_key)
-    request = monkey_learn.build_post_request_with_uri(@uri, @body) 
+    monkey_learn = MonkeyLearn::MonkeyLearn.new(api_key: @api_key)
+    request = monkey_learn.build_post_request(uri: @uri, body: @body) 
     assert_equal "POST", request.method
     assert_equal @uri.path, request.path
     assert_equal @body.to_json, request.body
