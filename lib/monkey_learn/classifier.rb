@@ -2,8 +2,12 @@ module MonkeyLearn
 
   class Classifier < MonkeyLearn
 
-    def initialize(api_key:, classifier_id:, should_use_sandbox: false)
-      super(api_key: api_key)
+    def initialize(api_key:,
+                   classifier_id:,
+                   should_use_sandbox: false,
+                   open_timeout: nil,
+                   read_timeout: nil)
+      super(api_key: api_key, open_timeout: open_timeout, read_timeout: read_timeout)
       @classifier_id = classifier_id
       @should_use_sandbox = should_use_sandbox
     end
